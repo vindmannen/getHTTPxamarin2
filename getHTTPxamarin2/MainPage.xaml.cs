@@ -34,9 +34,9 @@ namespace getHTTPxamarin2
                 SKColor randomColor = SKColor.FromHsv(ran.Next(256), ran.Next(256), ran.Next(256));
                 var entry = new ChartEntry(item.value)
                 {
-                    Label = item.value.ToString(),
+                    ValueLabel = ((int)item.value).ToString(),
                     Color = randomColor,
-                    ValueLabel = item.period
+                    Label = item.period
                 };
                 entries.Add(entry);
              }
@@ -44,7 +44,9 @@ namespace getHTTPxamarin2
             {
                 Entries = entries,
                 ValueLabelOrientation = Orientation.Vertical,
-                LabelTextSize = 30
+                LabelTextSize = 30,
+                MinValue = 1000,
+                IsAnimated = false
             };
         }
     }

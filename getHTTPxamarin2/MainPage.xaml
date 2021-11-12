@@ -8,7 +8,12 @@
             <Label Text="Hämta JSON data från Kolada!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
         <Button Clicked="Button_Clicked" Text="Hämta data"/>
-        <microcharts:ChartView x:Name="chartViewBar" HeightRequest="200" />
+        <ScrollView>
+            <StackLayout Spacing="10">
+                <Label Text="Anmälda brott" FontSize="25"/>
+                <microcharts:ChartView x:Name="chartViewBar" HeightRequest="200" />
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
 
 </ContentPage>
