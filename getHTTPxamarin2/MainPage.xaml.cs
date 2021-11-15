@@ -32,13 +32,12 @@ namespace getHTTPxamarin2
             {
                 Random ran = new Random();
                 SKColor randomColor = SKColor.FromHsv(ran.Next(256), ran.Next(256), ran.Next(256));
-                var entry = new ChartEntry(item.value)
+                entries.Add(new ChartEntry(item.value)
                 {
                     ValueLabel = ((int)item.value).ToString(),
                     Color = randomColor,
                     Label = item.period
-                };
-                entries.Add(entry);
+                });
              }
             chartViewBar.Chart = new BarChart
             {
